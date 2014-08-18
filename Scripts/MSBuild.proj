@@ -8,10 +8,15 @@
   </PropertyGroup>
 
   <Target Name="ContinuousIntegration">
-    
+    <MSBuild Projects="$(MSBuildThisFileDirectory)/Overall.targets"
+             Targets="ContinuousIntegration"
+             Properties="Configuration=$(Configuration)" />
   </Target>
 
   <Target Name="ContinuousDelivery">
-    
+    <MSBuild Projects="$(MSBuildThisFileDirectory)/Overall.targets"
+             Targets="ContinuousDelivery"
+             Properties="Configuration=$(Configuration)" />
   </Target>
+  
 </Project>

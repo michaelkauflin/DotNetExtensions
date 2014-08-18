@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" 
+         xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  
+  <Import Project="$(MSBuildThisFileDirectory)DotNetExtensions.props" Condition="$(DotNetExtensionsImported) != 'True'" />
+
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)'=='' ">Debug</Configuration>
+    <BuildInParallel Condition=" '$(BuildInParallel)'=='' ">true</BuildInParallel>
+    <ToolsVersion>4.0</ToolsVersion>
+    <Targets Condition=" '$(Targets)'==''">Build</Targets>
+
+    <BuildPropertiesCSharp Condition=" '$(BuildPropertiesCSharp)'=='' ">Configuration=$(Configuration)</BuildPropertiesCSharp>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Solutions Include="$(SourceRootFolder)\*.sln" />
+  </ItemGroup>
+
+  <Target Name="Build">
+    <MSBuild Projects="@(Solutions)" 
+             Properties="$(BuildPropertiesCSharp)"
+             Targets="$(Targets)"
+             ToolsVersion="$(ToolsVersion)"
+             BuildInParallel="$(BuildInParallel)" />
+  </Target>
+
+  <Target Name="Clean">
+    <MSBuild Projects="@(Solutions)"
+             Properties="$(BuildPropertiesCSharp)"
+             Targets="Clean"
+             ToolsVersion="$(ToolsVersion)"
+             BuildInParallel="$(BuildInParallel)" />
+    <RemoveDir Directories="$(GlobalBinFolder)" />
+  </Target>
+</Project>

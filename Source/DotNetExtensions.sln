@@ -11,7 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{DD6F92F9
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{0957BFDE-74A0-4EB9-8AC4-63E38C5642ED}"
 	ProjectSection(SolutionItems) = preProject
-		..\Build\Scripts\MSBuild.proj = ..\Build\Scripts\MSBuild.proj
+		..\Scripts\Build.targets = ..\Scripts\Build.targets
+		..\Scripts\DotNetExtensions.props = ..\Scripts\DotNetExtensions.props
+		..\Scripts\MSBuild.proj = ..\Scripts\MSBuild.proj
+		..\Scripts\Overall.targets = ..\Scripts\Overall.targets
 	EndProjectSection
 EndProject
 Global
