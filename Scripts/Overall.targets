@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" 
+         xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Import Project="$(MSBuildThisFileDirectory)DotNetExtensions.props" Condition="$(DotNetExtensionsImported) != 'True'" />
+  <Import Project="$(MSBuildThisFileDirectory)Build.targets" />
+  
+  
+  <Target Name="ContinuousIntegration">
+    <CallTarget Targets="Build" />
+  </Target>
+
+  <Target Name="ContinuousDelivery">
+    <CallTarget Targets="Clean" />
+  </Target>
+</Project>
