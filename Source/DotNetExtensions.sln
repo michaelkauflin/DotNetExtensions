@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetExtensions", "DotNetExtensions.csproj", "{5DFB9B6F-C0AD-41F0-81E3-5E6ACF555D3C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetExtensions", "DotNetExtensions\DotNetExtensions.csproj", "{5DFB9B6F-C0AD-41F0-81E3-5E6ACF555D3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetExtensions.Tests", "DotNetExtensions.Tests\DotNetExtensions.Tests.csproj", "{47BBB02D-46C1-4D42-9852-D1DEFBB5BFC9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{5DFB9B6F-C0AD-41F0-81E3-5E6ACF555D3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DFB9B6F-C0AD-41F0-81E3-5E6ACF555D3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DFB9B6F-C0AD-41F0-81E3-5E6ACF555D3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47BBB02D-46C1-4D42-9852-D1DEFBB5BFC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47BBB02D-46C1-4D42-9852-D1DEFBB5BFC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47BBB02D-46C1-4D42-9852-D1DEFBB5BFC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47BBB02D-46C1-4D42-9852-D1DEFBB5BFC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
