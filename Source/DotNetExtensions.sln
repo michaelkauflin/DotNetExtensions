@@ -7,6 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetExtensions", "DotNetE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetExtensions.Tests", "DotNetExtensions.Tests\DotNetExtensions.Tests.csproj", "{47BBB02D-46C1-4D42-9852-D1DEFBB5BFC9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{DD6F92F9-9A6E-48E5-AFD3-FF7A75C93666}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{0957BFDE-74A0-4EB9-8AC4-63E38C5642ED}"
+	ProjectSection(SolutionItems) = preProject
+		..\Build\Scripts\MSBuild.proj = ..\Build\Scripts\MSBuild.proj
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +31,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0957BFDE-74A0-4EB9-8AC4-63E38C5642ED} = {DD6F92F9-9A6E-48E5-AFD3-FF7A75C93666}
 	EndGlobalSection
 EndGlobal
